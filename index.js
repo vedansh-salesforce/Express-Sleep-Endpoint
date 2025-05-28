@@ -3,6 +3,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
+    console.log('Sleep called. Duration: ' + req.query.ms + ' ms.');
     try{
         let ms = parseInt(req.query.ms) - 300;
         ms = (ms < 0)? 0 : ms;
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/persist', (req, res) => {
+    console.log('Persist Called');
     res.sendStatus(200);
 });
 
