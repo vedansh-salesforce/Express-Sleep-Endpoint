@@ -24,5 +24,5 @@ app.listen(port, () => {
   console.log(`App started. Port: ${port}`);
   setInterval(() => {
     fetch('https://express-sleep-endpoint.onrender.com/persist');
-  }, 60000);
+  }, 890000);
 });
